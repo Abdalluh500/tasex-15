@@ -1,0 +1,87 @@
+*{
+  box-sizing: border-box;
+}
+.one{
+width: 300px;
+height: 200px;
+background-color: #ddd;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 50px;
+font-weight: bold;
+color: #03a9f4;
+position: relative;
+margin: 20px auto;
+
+}
+
+.one::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #03a9f4;
+transform: rotate(-5deg);
+z-index: -1;
+}
+
+.one::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e91e63;
+  transform: rotate(5deg);
+  z-index: -2;
+  }
+  
+.two{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color:white ;
+  position: relative;
+}
+
+.two::before{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#ddd;
+  content: "Elzero";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: #e91e63 #e91e63 #e91e63 white;
+  transition: .5s;
+}
+
+.two::after{
+content: "";
+position: absolute;
+border-radius: 50%;
+width: 200px;
+height: 200px;
+border: 10px solid;
+border-color:#2196f3 transparent #2196f3 #2196f3   ;
+transition-delay: .5s;
+}
+
+.two:hover::before{
+  transform: rotate(1turn);
+} 
+
+.two:hover::after{
+  transform: rotate(1turn);
+}
